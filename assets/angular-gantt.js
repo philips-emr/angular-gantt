@@ -970,7 +970,7 @@ Github: https://github.com/angular-gantt/angular-gantt.git
                 var i;
                 while (cDate < self.endDate) {
                     var timeFrames = self.calendar.getTimeFrames(cDate);
-                    var nextCDate = moment.min(cDateNextDay, self.endDate);
+                    var nextCDate = cDate.add(1,'days');
                     timeFrames = self.calendar.solve(timeFrames, cDate, nextCDate);
                     var cTimeFrames = [];
                     for (i=0; i < timeFrames.length; i++) {
